@@ -1,8 +1,9 @@
 import React from "react";
+import "./table.css";
 
 export const Table = ({ headersMap = [], data = [] }) => {
   return (
-    <table>
+    <table className="table">
       <tbody>
         <tr>
           <TableHeader headersMap={headersMap} />
@@ -20,9 +21,9 @@ export function TableHeader({ headersMap = {} }) {
 }
 
 export function TableData({ headersMap = {}, data = [] }) {
-  return data.map((item) => {
+  return data.map((item, idx) => {
     return (
-      <tr key={item.id}>
+      <tr key={idx}>
         {Object.entries(headersMap).map(([key, value]) => {
           return <td key={key}>{item[key]}</td>;
         })}
