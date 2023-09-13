@@ -1,3 +1,18 @@
+/* table.css */
 .table {
-  border: 5px solid blue;
+  width: 100%;
+  border: 3px solid #dddddd;
+  margin: 0 auto;
+}
+
+.table th,
+.table td {
+  border: 1px solid;
+  text-align: left;
+  padding: 8px;
+}
+
+.table th {
+  background-color: darkgray;
+  font-weight: bold;
 }
